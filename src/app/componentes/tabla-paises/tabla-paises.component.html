@@ -1,0 +1,16 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Capital</th>
+            <th>Habitantes</th>
+            <th>Foto</th>
+        </tr>
+        <tr *ngFor="let pais of this.input_tablaPaises">
+            <td>{{pais.name}}</td>
+            <td>{{pais.capital}}</td>
+            <td>{{pais.population}}</td>
+            <td><img src={{pais.flag}}></td>
+        </tr>
+    </table>
+</div>  
