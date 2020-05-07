@@ -1,0 +1,17 @@
+<div *ngIf="input_detallesPais" class="container">
+    <div class="lista">
+        <span class="titulos">Pelicula</span>
+        <ul>
+            <li>{{input_detallesPais.name}}</li>
+            <li>{{input_detallesPais.capital}}</li>
+            <li>{{input_detallesPais.population}}</li>
+        </ul>
+    </div>
+    <div class="foto">
+      <img src={{input_detallesPais.flag}} alt="Bandera de pais" >
+    </div>
+    <div class="boton">
+        <button type="button" (click)="limpiar()">Limpiar</button>
+        <!-- <button type="button" (click)="Borrar()">Borrar</button> -->
+    </div>
+</div>

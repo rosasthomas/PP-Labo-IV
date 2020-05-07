@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioPaisesService } from 'src/app/servicios/servicio-paises.service';
+import { Pais } from 'src/app/clases/pais';
 
 @Component({
   selector: 'app-paises-listado',
@@ -9,6 +10,7 @@ import { ServicioPaisesService } from 'src/app/servicios/servicio-paises.service
 export class PaisesListadoComponent implements OnInit {
 
   listadoPaises
+  paisDetalle
 
   constructor(private servicio:ServicioPaisesService) {
     this.servicio.getPaises().subscribe(data => {
@@ -18,6 +20,10 @@ export class PaisesListadoComponent implements OnInit {
    }
 
   ngOnInit(): void {
+  }
+
+  paisParaDetalle(pais:Pais){
+    this.paisDetalle = pais;
   }
 
 }

@@ -11,6 +11,7 @@
             <td>{{pais.capital}}</td>
             <td>{{pais.population}}</td>
             <td><img src={{pais.flag}}></td>
+            <td *ngIf="this.boton_tablaPaises"><button type="button" (click)="detalles(pais)">Detalles</button></td>
         </tr>
     </table>
 </div>  

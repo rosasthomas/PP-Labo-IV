@@ -21,4 +21,7 @@ export class ActorAltaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  evento(dato:any){
+    
+  }
 }

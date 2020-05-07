@@ -12,7 +12,8 @@ import { ActorAltaComponent } from './componentes/actor-alta/actor-alta.componen
 import { PaisesListadoComponent } from './componentes/paises-listado/paises-listado.component';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { HttpClientModule} from '@angular/common/http'
-import {ServicioPaisesService} from './servicios/servicio-paises.service'
+import {ServicioPaisesService} from './servicios/servicio-paises.service';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component'
  
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {ServicioPaisesService} from './servicios/servicio-paises.service'
     ActorListadoComponent,
     ActorAltaComponent,
     PaisesListadoComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    DetallePaisComponent
   ],
   imports: [
     BrowserModule,
