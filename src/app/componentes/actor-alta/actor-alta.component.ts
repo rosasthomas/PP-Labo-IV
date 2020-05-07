@@ -11,11 +11,9 @@ export class ActorAltaComponent implements OnInit {
   listadoPaises
 
   constructor(private servicio:ServicioPaisesService) {
-    this.servicio.getPaises().subscribe(data => {
-      console.log()
-      this.listadoPaises = data;
-    });
-
+    setTimeout(() => {
+      this.listadoPaises = servicio.getPaises()
+    }, 1000);
    }
 
   ngOnInit(): void {

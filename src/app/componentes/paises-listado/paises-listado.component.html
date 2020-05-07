@@ -23,6 +23,6 @@
        <app-tabla-paises [boton_tablaPaises]="true" (output_tablaPaises)="paisParaDetalle($event)" [input_tablaPaises]="listadoPaises"></app-tabla-paises>  
     </div>
     <div class="column">
-        <app-detalle-pais [input_detallesPais]="paisDetalle"></app-detalle-pais>
+        <app-detalle-pais (output_detallePais)='deshabilitarPais($event)' [deshabilitar_detallePais]='true' [input_detallesPais]="paisDetalle"></app-detalle-pais>
     </div>
 </div> 

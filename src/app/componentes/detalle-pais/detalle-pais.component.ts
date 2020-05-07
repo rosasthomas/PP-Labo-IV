@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Pais } from 'src/app/clases/pais';
 
 @Component({
@@ -9,6 +9,8 @@ import { Pais } from 'src/app/clases/pais';
 export class DetallePaisComponent implements OnInit {
 
   @Input() input_detallesPais:Pais;
+  @Output() output_detallePais:EventEmitter<any> = new EventEmitter<any>()
+  @Input() deshabilitar_detallePais:boolean;
 
   constructor() { }
 
@@ -17,5 +19,9 @@ export class DetallePaisComponent implements OnInit {
 
   limpiar(){
     this.input_detallesPais = null;
+  }
+
+  deshabilitar(pais:Pais){
+    this.output_detallePais.emit(pais)
   }
 }
