@@ -11,7 +11,7 @@ export class ServicioPaisesService {
   listaPaises
 
   constructor(private http:HttpClient) {
-    http.get(`http://restcountries.eu/rest/v2/region/americas`).subscribe((datos)=>{
+    http.get(`https://restcountries.eu/rest/v2/region/americas`).subscribe((datos)=>{
       this.listaPaises = datos
     })
    }
