@@ -12,7 +12,11 @@ export class DetallePaisComponent implements OnInit {
   @Output() output_detallePais:EventEmitter<any> = new EventEmitter<any>()
   @Input() deshabilitar_detallePais:boolean;
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      
+    }, 2000);
+   }
 
   ngOnInit(): void {
   }

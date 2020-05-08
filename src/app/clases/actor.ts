@@ -1,3 +1,5 @@
+import { Pais } from './pais';
+
 export class Actor {
     id:number;
     nombre:string;
@@ -5,5 +7,5 @@ export class Actor {
     sexo:string;
     fechaNacimiento:string;
     foto:string;
-    paisOrigen:string
+    paisOrigen:Pais
 }

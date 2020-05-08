@@ -20,7 +20,10 @@
 </div>
 <div class="row">
     <div class="column">
+        <app-tabla-actor (output_tablaActores)="actorParaDetalle($event)" [boton_tablaActores]="true" [input_tablaActores]="listadoActores"></app-tabla-actor>
     </div>
     <div class="column">
+        <app-actor-detalle [input_detallesActor]="actorDetalle"></app-actor-detalle>
+       <app-detalle-pais [input_detallesPais]="pais"></app-detalle-pais>
     </div>
 </div>

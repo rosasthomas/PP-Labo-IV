@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Actor } from 'src/app/clases/actor';
+import { Pais } from 'src/app/clases/pais';
 
 @Component({
   selector: 'app-actor-listado',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActorListadoComponent implements OnInit {
 
-  constructor() { }
+  listadoActores
+  actorDetalle:Actor
+  pais:Pais
+
+  constructor() { 
+    this.listadoActores = JSON.parse(localStorage.getItem('actores'))
+  }
 
   ngOnInit(): void {
+  }
+
+  actorParaDetalle(actor:Actor){
+    this.actorDetalle = actor
+    this.pais = this.actorDetalle.paisOrigen
+    console.log(this.pais)
   }
 
 }

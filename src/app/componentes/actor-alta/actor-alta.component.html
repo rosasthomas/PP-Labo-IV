@@ -8,7 +8,7 @@
     <div routerLink="/peliculas/alta"> 
         <span>Alta Peliculas</span>
     </div>
-    <div routerLink="/peliculas/listado">
+    <div routerLink="/actor/listado">
         <span>Actores</span>
     </div>
     <div routerLink="/busqueda">
@@ -20,8 +20,29 @@
 </div>
 <div class="row">
     <div class="column">
-        <app-tabla-paises [boton_tablaPaises]="true" (output_tablaPaises)="evento($event)" [input_tablaPaises]="listadoPaises"></app-tabla-paises>
+        <app-tabla-paises [boton_tablaPaises]="true" (output_tablaPaises)="agregarPais($event)" [input_tablaPaises]="listadoPaises"></app-tabla-paises>
     </div>
     <div class="column">
+        <div class="container">
+            <form>
+                <span class="alta">Alta Actor</span>
+                <div class="desc">
+                    <input type="text" placeholder="Nombre..." id="nombre" class="desc">
+                </div>
+                <div class="tipo">
+                    <input type="text" placeholder="Apellido..." id="apellido" class="tipo">
+                </div>
+                <div class="fecha">
+                    <input type="text" placeholder="Sexo..." id="sexo" class="fecha">
+                </div>
+                <div class="precio">
+                    <input type="date" placeholder="Fecha Nacimiento..." id="fecha" class="precio">
+                </div>
+                <div class="boton">
+                    <button type="button" (click)="agregar()" class="boton">Agregar</button>
+                </div>
+            </form>
+        </div>
+        <app-detalle-pais [input_detallesPais]="paisOrigen"></app-detalle-pais>
     </div>
 </div>

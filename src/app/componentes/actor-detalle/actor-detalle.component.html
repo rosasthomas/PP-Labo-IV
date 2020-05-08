@@ -1,0 +1,21 @@
+<div *ngIf="input_detallesActor" class="container">
+    <div class="lista">
+        <span class="titulos">Actor</span>
+        <ul>
+            <li>{{input_detallesActor.id}}</li>
+            <li>{{input_detallesActor.nombre}}</li>
+            <li>{{input_detallesActor.apellido}}</li>
+            <li>{{input_detallesActor.sexo}}</li>
+            <li>{{input_detallesActor.fechaNacimiento}}</li>
+            <li>{{input_detallesActor.paisOrigen.name}}</li>
+            <li>{{input_detallesActor.sexo}}</li>
+
+        </ul>
+    </div>
+    <div class="foto">
+      <img src={{input_detallesActor.foto}} alt="Bandera de pais" >
+    </div>
+    <div class="boton">
+        <button type="button" (click)="limpiar()">Limpiar</button>
+    </div>
+</div>
